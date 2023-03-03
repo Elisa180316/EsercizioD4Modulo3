@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenzia di viaggi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!--16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer".-->
+  <style>
+  .hot-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 30px;
+    background-color: red;
+    border-radius: 20%;
+    font-weight: bold;
+    text-align: center;
+  
+  }
+
+  #remove {
+    top: 10px;
+    right: 10px;
+    width: 100%;
+    height: 70px;
+    background-color: red;
+   font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+  <!--  1) Implementa una navbar. Collega ogni sezione della pagina agli elementi del menu. 2) Aggiungi un logo alla navbar, una qualsiasi immagine.-->
+  <nav class="navbar bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./img/img.jpeg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+        Volamondo
+      </a>
+    </div>
+    <div class="container-fluid justify-content-center">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#chisiamo">Chi siamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#offertesettimana">Offerte della settimana</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#welcomesummer">Welcome summer!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#offertagiorno">Offerta del giorno</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#lastmin">Last Minute</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#feedback">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contatti">Contatti</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--  3) Aggiungi una sezione Jumbotron con il nome e il payoff dell'agenzia.-->
+
+  
+    <div id="chisiamo" class="jumbotron jumbotron-fluid ">
+
+      <div class="container .mx-5 p-4 text-center">
+        <h1 class="display-4">Agenzia di viaggi Volamondo</h1>
+        <p class="lead">Viaggia con noi regalandoti una splendida esperienza per il corpo e l'anima.</p>
+      </div>
+    </div>
+  
+  <!--  4) Implementa la sezione "Offerta della settimana". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande
+3 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)-->
+
+
+<!--12) Collapse sezione -->
+  <p class="text-center my-5">
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+      aria-expanded="false" aria-controls="collapseExample">
+      Mostra Offerte della settimana
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <section id="offertesettimana" style=" margin: 5%; ">
+      <div class="jumbotron jumbotron-fluid ">
+        <div class="container text-center">
+          <h1 class="display-4">Offerte della settimana</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/israele-gerusalemme-260x185.jpg" class="card-img-top" alt="Israele">
+            <div class="card-body">
+              <h5 class="card-title">Israele</h5>
+              <p class="card-text">Partenza 01 marzo 2023 - 5 gg | 4 notti
+
+                con escursioni
+
+                € 1.590,00 a persona</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/giordania-tour-fb-260x185.jpg" class="card-img-top" alt="Giordania">
+            <div class="card-body">
+              <h5 class="card-title">Giordania</h5>
+              <p class="card-text">
+                Partenza 17 marzo 8 giorni/ 7 notti
+
+                con volo da Roma
+
+                € 1.540,00 a persona</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/Mauritius-hotel-260x185.jpg" class="card-img-top" alt="Mauritius">
+            <div class="card-body">
+              <h5 class="card-title">Mauritius</h5>
+              <p class="card-text">Partenza 28 marzo 2023 - 9 gg | 7 notti
+
+                con volo da Roma
+
+                € 1.790,00 a persona</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card">
+            <img src="./img/amsterdam-260x185.jpg" class="card-img-top" alt="Olanda">
+            <div class="card-body">
+              <h5 class="card-title">Olanda e Parco dei tulipani</h5>
+              <p class="card-text">Partenza 25 aprile 2023
+
+                CROCIERA 7 giorni / 6 notti
+
+                da € 1.525,00 a persona</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- 5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente.
+
+  In questa sezione dovranno esserci:
+  
+  6 card per destinazioni per linea a schermo grande
+  3 card per destinazioni per linea a schermo medio (tablet)
+  2 card per destinazioni per linea a schermo piccolo (mobile)-->
+
+  
+    <section id="welcomesummer" style=" margin: 5%;">
+      <div class="jumbotron jumbotron-fluid ">
+        <div class="container .mx-3 p-2 text-center">
+          <h3 class="display-4">Welcome summer</h3>
+
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+          <!--8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.-->
+          <div class="col mb-4">
+            <div class="card">
+              <img src="./img/tenerife.jpeg" class="card-img-top" alt="Tenerife">
+              <div class="card-body">
+                <h5 class="card-title">Tenerife</h5>
+                <p class="card-text">Partenza 1 Agosto 2023
+
+                  volo da Roma 7 giorni / 6 notti
+
+                  da € 3400,00 a persona</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="./img/okinawa.jpeg" class="card-img-top" alt="Okinawa">
+              <div class="card-body">
+                <h5 class="card-title">Okinawa</h5>
+                <p class="card-text">Partenza 25 Agosto 2023
+
+                  Volo da Palermo 7 giorni / 6 notti
+
+                  da € 4750,00 a persona</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="./img/capoverde.jpeg" class="card-img-top" alt="Capo Verde">
+              <div class="card-body">
+                <h5 class="card-title">Capo Verde</h5>
+                <p class="card-text">Partenza 25 Luglio 2023
+
+                  Volo da Milano 7 giorni / 6 notti
+
+                  da € 1.850,00 a persona</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="./img/Maldive.jpeg" class="card-img-top" alt="Maldive">
+              <div class="card-body">
+                <h5 class="card-title">Maldive</h5>
+                <p class="card-text">Partenza 25 Giugno 2023
+
+                  Volo da Roma 7 giorni / 6 notti
+
+                  da € 5780,00 a persona</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="./img/SMonica.jpeg" class="card-img-top" alt="S. Monica">
+              <div class="card-body">
+                <h5 class="card-title">Santa Monica</h5>
+                <p class="card-text">Partenza 1 Agosto 2023
+
+                  CROCIERA 7 giorni / 6 notti
+
+                  da € 6580,00 a persona</p>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="./img/Salento.jpeg" class="card-img-top" alt="Salento">
+              <div class="card-body">
+                <h5 class="card-title">Salento</h5>
+                <p class="card-text">Partenza 21 Luglio 2023
+
+                  Volo da Pisa 7 giorni / 6 notti
+
+                  da € 1.530,00 a persona</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  
+  <!--6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e breve descrizione del luogo -->
+  
+    <div class="jumbotron jumbotron-fluid d-none d-md-block">
+      <div class="container .mx-3 p-2 mb-5 text-center">
+        <h3 class="display-4">Offerta del giorno</h3>
+
+      </div>
+    </div>
+
+    <div id="offertagiorno" class="container text-center ms-0">
+      <div class="row no-gutters">
+        <div class="col-md-8 d-none d-md-block p-0">
+          <img src="./img/Offertadelgiorno.jpeg" alt="Sicilia" class="img-fluid rounded" width="66%">
+        </div>
+        <div class="col-md-4 my-0 d-none d-md-block p-0">
+          <!--7) Rendi invisibile la sezione "Offerta del giorno" su schermi mobile.-->
+          <div class="card">
+            <div class="card-body">
+              Percorso alla scoperta della Sicilia.
+              Partenza 21.03.2023 da Milano.
+              Euro 311,00 a persona.
+              "L'Itinerario alla scoperta della Sicilia più spettacolare" è un viaggio completo che ti permetterà di
+              scoprire i luoghi più suggestivi e rappresentativi di questa meravigliosa isola del Mediterraneo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  <!--9) Crea una sezione "Last Minute", in cui mostrerai le immagini delle destinazioni last minute sotto forma di card.-->
+ 
+    <section id="lastmin" style=" margin: 5%;">
+      <div class="jumbotron jumbotron-fluid ">
+        <div class="container .mx-3 p-2 text-center">
+          <h3 class="display-4">Last minute</h3>
+
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="./img/LastMin1.jpeg" class="card-img-top rounded" alt="Vienna">
+          <div class="card-body">
+            <h5 class="card-title">Vienna</h5>
+            <p class="card-text">Schoenbrunnerstrasse 41, Vienna, Vienna, Austria</p>
+            <p class="card-text"><small class="text-muted">51,00 Euro a persona</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/LastMin2.jpeg" class="card-img-top rounded" alt="Praga">
+          <div class="card-body">
+            <h5 class="card-title">Praga</h5>
+            <p class="card-text">U Stare Posty 247/6, Prague, Prague Region, Czech </p>
+            <p class="card-text"><small class="text-muted">26,00 Euro a persona</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/LastMin3.jpeg" class="card-img-top rounded" alt="New York">
+          <div class="card-body">
+            <h5 class="card-title">New York</h5>
+            <p class="card-text">55 West 44th Street, New York, NY, United States</p>
+            <p class="card-text"><small class="text-muted">91,00 Euro a persona</small></p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </section>
+
+
+  <!--10) Crea una sezione "Testimonial", dove l'utente potrà trovare alcuni feedback da utenti fittizi.-->
+  
+    <section id="feedback" style=" margin: 5%;">
+      <div class="jumbotron jumbotron-fluid ">
+        <div class="container .mx-3 p-2 text-center">
+          <h3 class="display-4">Testimonial</h3>
+
+        </div>
+      </div>
+
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./img/Caros1.jpeg" class="d-block w-100 rounded-pill" alt="Famiglia">
+            <div class="carousel-caption d-none d-md-block">
+
+              <p>Ottima esperienza! Ci è stata consigliata la vacanza perfetta per noi (famiglia con bambini) in un
+                luogo
+                meraviglioso! Siamo stati assistiti da una persona competente, precisa, gentilissima e con una vera
+                passione per il suo lavoro! Grazie di cuore!</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./img/caros2.jpeg" class="d-block w-100 rounded-pill" alt="Spiaggia">
+            <div class="carousel-caption d-none d-md-block">
+
+              <p>Agenzia di viaggi con personale simpatico, professionale, molto disponibile, che sa consigliarti al
+                meglio. Inoltre organizza direttamente viaggi in modo ottimale ai quali è difficile rinunciare.
+                Consigliata senza dubbi o esitazione.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/caros3.jpeg" class="d-block w-100 rounded-pill" alt="Neve">
+            <div class="carousel-caption d-none d-md-block">
+
+              <p>
+              <div class="gmail_default">Agenzia molto precisa e disponibile. Assolutamente consigliata.</div>
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    
+
+
+    <!-- 11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci". -->
+    <footer id="contatti" class="bg-dark text-center text-white">
+
+      <div class="container p-4">
+        <!-- Form -->
+        <section class="">
+          <form action="">
+            <div class="row d-flex justify-content-center">
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Iscriviti alla nostra newsletter!</strong>
+                </p>
+              </div>
+              <div class="col-md-5 col-12">
+                <!-- Email  -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="form5Example21" class="form-control" />
+                  <label class="form-label" for="form5Example21">Indirizzo e-mail</label>
+                </div>
+              </div>
+
+              <div class="col-auto">
+
+                <button type="submit" class="btn btn-outline-light mb-4">
+                  Iscriviti
+                </button>
+<!-- 14) Crea un modale con un messaggio e un campo email. -->
+                <button type="button" class="btn btn-outline-light mb-4" data-bs-toggle="modal" data-bs-target="#myModal">
+                  Contattaci
+                </button>
+               
+              </div>
+              
+            </div>
+
+          </form>
+        </section>
+
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Agenzia Viaggi Volamondo - Via F.lli Cervi n. 25 - Roma.
+            Tel: 02-985471 - E-mail: agenziavolamondo@gmail.it - P.I.: 022478516
+          </p>
+        </section>
+
+
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Volamondo.com</a>
+      </div>
+
+    </footer>
+    <script>
+    //17) Crea una funzione che rimuova tutte le "card" dalla pagina-->//
+
+function removeAllCards() {
+  // Seleziono le cards tramite classe e le inserisco in un array
+  const cards = Array.from(document.querySelectorAll('.card'));
+
+  // rimuovo le cards con foreach - remove
+  cards.forEach((card) => {
+    card.remove();
+  });
+}
+</script>
+    <button id = "remove" onclick="removeAllCards()">Elimina le cards</button>
+   <!-- 14) Crea un modale con un messaggio e un campo email. -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Nuovo messaggio</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"></label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Messaggio:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            <button type="button" class="btn btn-primary">Invia</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+
+
+    <!--13)Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina. <button onclick="countImages()">Count Images</button>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+   
+<!--<script>
+  //13)Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina.
+  
+  function countImages() {
+    var images = document.getElementsByTagName('img');
+    var count = 0;
+    for (var i = 0; i < images.length; i++) {
+      count++;
+    }
+   alert('There are ' + count + ' images in this page.');
+    
+  }</script>-->
+
+  <!--16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer".-->
+<script>
+  //HOT BTN AL CARICAMENTO:
+  //function addHotButton() {
+    // Recupero le img
+   // const images = document.querySelectorAll('#welcomesummer img');
+  
+    // ciclo foreach tra le img ed aggiuno il bottone con testo
+    //images.forEach(image => {
+      //const hotButton = document.createElement('div');
+   //   hotButton.innerHTML = "HOT!";
+     // hotButton.classList.add('hot-button');
+      //image.parentNode.insertBefore(hotButton, image.nextSibling);
+    //});
+  //}
+//Aggiungo evento del caricamento della pagina
+ // window.onload = function() {
+  //addHotButton();
+//};
+
+//HOT BTN AL MOUSEOVER/OUT
+function addHotButtonOnMouseOver(event) {
+  const image = event.target;
+
+  // Creo il button con il testo sopra l'img
+  if (!image.hotButton) {
+    const hotButton = document.createElement('div');
+    hotButton.classList.add('hot-button');
+    image.parentNode.insertBefore(hotButton, image.nextSibling);
+    image.hotButton = hotButton;
+    hotButton.innerText = "HOT!"
+
+    // Mouseout
+    image.addEventListener('mouseout', () => {
+      hotButton.remove();
+      image.hotButton = null;
+    });
+  }
+}
+//Mouseover
+const images = document.querySelectorAll('#welcomesummer img');
+
+images.forEach(image => {
+  image.addEventListener('mouseover', addHotButtonOnMouseOver);
+});
+
+
+</script>
+
+
+</body>
+
+</html>
